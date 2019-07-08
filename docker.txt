@@ -1,0 +1,37 @@
+
+#Dockerインストール（URLから結局入れた）
+#brew install docker
+#brew cask install docker
+
+#docker-composeインストール
+curl -L https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+#Laravel Project作成
+composer create-project --prefer-dist laravel/laravel testDocker "5.8.*"
+
+#React.js
+php artisan preset react
+npm install
+#export PATH=$HOME/.nodebrew/current/bin:$PATH >> .zshrc
+#source ~/.bashrc
+
+#ライブラリ
+composer install 
+
+#Docker起動
+docker-compose up
+
+==================================
+①マウント系エラー
+ERROR: for testdoc_nginx_1  Cannot start service nginx: b'OCI runtime create failed: container_linux.go:344: starting container process caused "process_linux.go:424: container init caused \\"rootfs_linux.go:58: mounting \\\\\\"/Users/homma/Desktop/testDoc/etc/nginx/conf.d/default.conf\\\\\\" to rootfs \\\\\\"/var/lib/docker/overlay2/7d6caf3be9062b57f3db3bf36eeba1a4a7c66979a4f0dea0a1311523f5818e75/merged\\\\\\" at \\\\\\"/var/lib/docker/overlay2/7d6caf3be9062b57f3db3bf36eeba1a4a7c66979a4f0dea0a1311523f5818e75/merged/etc/nginx/conf.d/default.conf\\\\\\" caused \\\\\\"not a directory\\\\\\"\\"": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type'
+
+ERROR: for nginx  Cannot start service nginx: b'OCI runtime create failed: container_linux.go:344: starting container process caused "process_linux.go:424: container init caused \\"rootfs_linux.go:58: mounting \\\\\\"/Users/homma/Desktop/testDoc/etc/nginx/conf.d/default.conf\\\\\\" to rootfs \\\\\\"/var/lib/docker/overlay2/7d6caf3be9062b57f3db3bf36eeba1a4a7c66979a4f0dea0a1311523f5818e75/merged\\\\\\" at \\\\\\"/var/lib/docker/overlay2/7d6caf3be9062b57f3db3bf36eeba1a4a7c66979a4f0dea0a1311523f5818e75/merged/etc/nginx/conf.d/default.conf\\\\\\" caused \\\\\\"not a directory\\\\\\"\\"": unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type'
+ERROR: Encountered errors while bringing up the project.
+honmayoukinoAir:testDoc homma$ docker-compose rm
+Going to remove testdoc_nginx_1
+Are you sure? [yN] y
+Removing testdoc_nginx_1 ... done
+honmayoukinoAir:testDoc homma$ docker-compose up -d --build
+Building phpfpm
+

@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Routeで処理するパターン
+Route::get('/', 'TopController@index')->middleware('user');

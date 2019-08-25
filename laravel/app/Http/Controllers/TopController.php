@@ -20,8 +20,9 @@ class TopController extends Controller
     */
     public function index(Request $req)
     {
-echo $req['user_id'];
-exit();
+//echo $req['user_id'];
+//exit();
+return view('welcome');
 
     }
     //

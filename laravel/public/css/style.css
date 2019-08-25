@@ -1,0 +1,7 @@
+pre{display:none !important;}
+.main{}
+.block{width:60%; height:800px; display:inline-block; vertical-align:top;}
+.html,body,div{margin:0px;}
+.header{width:100%;}
+.footer{width:100%;}
+.sidebar{width:30%; display:inline-block; vertical-align:top;}

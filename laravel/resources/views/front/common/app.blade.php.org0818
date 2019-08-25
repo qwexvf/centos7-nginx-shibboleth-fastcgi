@@ -1,0 +1,44 @@
+<DOCTYPE HTML>
+<html lang="ja">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <!-- React -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        <link href="/css/style.css?t=<?php echo time();?>" rel="stylesheet" type="text/css">
+	<title>Humanics Career Platform | Dashboard</title>
+
+        <!-- css frame  -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+	<!-- 暫定テンプレ material-dashboard  -->
+	<link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+
+</head>
+<body class="drawer drawer--left">
+
+  @include('front.common.header')
+
+  <div class="contents">
+    <div class="main">
+
+        <script>
+            @if (session('flash_message'))
+                $(function () {
+                        toastr.success('{{ session('flash_message') }}');
+                });
+            @endif
+        </script>
+        @yield('content')
+    </div>
+  </div>
+
+  @include('front.common.footer')
+
+</body>
+
+</html>

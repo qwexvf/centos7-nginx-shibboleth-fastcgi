@@ -4,4 +4,6 @@ pre{display:none !important;}
 .html,body,div{margin:0px;}
 .header{width:100%;}
 .footer{width:100%;}
-.sidebar{width:30%; display:inline-block; vertical-align:top;}
+.sidebar{width:30%; display:inline-block; vertical-align:top;
+background-color:#001B1F;
+}

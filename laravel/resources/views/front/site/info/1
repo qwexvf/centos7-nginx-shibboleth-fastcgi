@@ -27,10 +27,10 @@
                 <tr style="height:80px;">
                     <td><?php echo $i; ?></td>
                     <td></td>
-                    <td><a href="/delivery/submit/1" class="text-info">Biology</a></td>
                     <td></td>
                     <td></td>
-                    <td><a href="/delivery/submit/2" class="text-info">Field Research</a></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -49,7 +49,7 @@
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table">
-                      <thead class=" text">
+                      <thead class=" text-primary">
                         <th>
 			   Course Title
                         </th>
@@ -57,20 +57,23 @@
                            Teacher
                         </th>
                         <th>
+                          Email
+                        </th>
+                        <th>
+                          詳細
                         </th>
                       </thead>
                       <tbody>
 
                         <tr>
                           <td>
-				Scientific writing and publishing
                           </td>
                           <td>
-				Atsushi Kawaguchi
 			  </td>
                           <td>
-				<button type="button" href="/delivery/submit/3" class="btn btn-info">Submit Deliverable</button>
                           </td>
+			  <td>
+			  </td>
                         </tr>
                       </tbody>
                     </table>

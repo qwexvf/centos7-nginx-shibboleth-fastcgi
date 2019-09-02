@@ -14922,6 +14922,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   -webkit-transition-timing-function: linear, linear, ease;
   transition-timing-function: linear, linear, ease;
   -webkit-overflow-scrolling: touch;
+  background-color:#001B1F;
 }
 
 .visible-on-sidebar-regular {

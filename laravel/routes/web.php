@@ -28,6 +28,11 @@ Route::any('/course', function(){
 	return view('front.site.course.index');
 });
 
+//キャリアビジョン
+Route::any('/career', function(){
+        return view('front.site.career.index');
+});
+
 //プロフィール
 Route::any('/profile', 'Front\MemberController@index')->middleware('user');
 
@@ -35,4 +40,16 @@ Route::any('/profile', 'Front\MemberController@index')->middleware('user');
 Route::get('/contact', 'Front\ContactController@index');
 Route::post('/contact/confirm', 'Front\ContactController@confirm');
 Route::any('/contact/complete', 'Front\ContactController@complete');
+
+//成果物登録
+Route::get('/delivery/submit/{id}', 'Front\DeliveryController@input');
+
+//お知らせ
+Route::get('/info', 'Front\InfoController@index');
+
+//成果物
+Route::get('/delivery/', 'Front\DeliveryController@index');
+Route::get('/delivery/detail/{id}', 'Front\DeliveryController@detail');
+
+
 

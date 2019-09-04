@@ -58,4 +58,6 @@ Route::get('/delivery/detail/{id}', 'Front\DeliveryController@detail');
 
 //ケイパビリティ
 Route::get('/capability/', 'Front\CapabilityController@index');
+Route::get('/capability/{id}', 'Front\CapabilityController@detail');
+
 

@@ -9,7 +9,7 @@
 	<h2>Courses</h2>
         <table class="table table-bordered" style="background-color:white;">
             <thead>
-                <tr>
+                <tr style="background-color:#001B1F; color:white;">
                     <th></th>
                     <th style="width:14%; text-align:center;">Monday</th>
                     <th style="width:14%; text-align:center;">Tuesday</th>

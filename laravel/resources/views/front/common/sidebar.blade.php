@@ -17,45 +17,73 @@
 
       <div class="sidebar-wrapper" style="color:white;">
         <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="">
+
+          <li class="nav-item" style="height:30px;">
+            <a class="nav-link" href="/">
               <i class="material-icons">dashboard</i>
-              <p style="color:white;">Dashboard <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span></p>
+              <p style="color:white; display:inline;">Allication ＋
+              </p>
             </a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" style="height:30px;">
+            <a class="nav-link" href="/">
+              <i class="material-icons">dashboard</i>
+              <p style="color:white; display:inline;">Dashboard 
+		@if (Request::is('/'))
+		<span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
+		@endif
+	      </p>
+            </a>
+          </li>
+
+          <li class="nav-item" style="height:30px;">
             <a class="nav-link" href="/info">
               <i class="material-icons">dashboard</i>
-              <p style="color:white;">Information</p>
+              <p style="color:white; width:100px; display:inline;">Information</p>
+                @if (Request::is('info*')) 
+                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
+                @endif
             </a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" style="height:30px;">
             <a class="nav-link" href="/career">
               <i class="material-icons">person</i>
-              <p style="color:white;">CareerVision</p>
+              <p style="color:white; display:inline;">CareerVision</p>
+                @if (Request::is('career*'))
+                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
+                @endif
             </a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" style="height:30px;">
             <a class="nav-link" href="/course">
               <i class="material-icons">bubble_chart</i>
-              <p style="color:white;">Course</p>
+              <p style="color:white; display:inline;">Course</p>
+                @if (Request::is('course*'))
+                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
+                @endif
             </a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" style="height:30px;">
             <a class="nav-link" href="/capability">
               <i class="material-icons">bubble_chart</i>
-              <p style="color:white;">Capability</p>
+              <p style="color:white; display:inline;">Capability</p>
+                @if (Request::is('capability*'))
+                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
+                @endif
             </a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" style="height:30px;">
             <a class="nav-link" href="/delivery">
               <i class="material-icons">bubble_chart</i>
-              <p style="color:white;">Deliverable</p>
+              <p style="color:white; display:inline;">Deliverable</p>
+                @if (Request::is('delivery*'))
+                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
+                @endif
             </a>
           </li>
 

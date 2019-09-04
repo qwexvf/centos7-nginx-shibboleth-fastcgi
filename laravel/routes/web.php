@@ -33,6 +33,11 @@ Route::any('/career', function(){
         return view('front.site.career.index');
 });
 
+Route::any('/career/list', function(){
+        return view('front.site.career.list');
+});
+
+
 //プロフィール
 Route::any('/profile', 'Front\MemberController@index')->middleware('user');
 
@@ -51,5 +56,6 @@ Route::get('/info', 'Front\InfoController@index');
 Route::get('/delivery/', 'Front\DeliveryController@index');
 Route::get('/delivery/detail/{id}', 'Front\DeliveryController@detail');
 
-
+//ケイパビリティ
+Route::get('/capability/', 'Front\CapabilityController@index');
 

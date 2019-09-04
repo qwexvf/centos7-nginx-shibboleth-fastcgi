@@ -7,7 +7,7 @@
           <div class="row">
 
             <div class="col-md-8">
-	      <h2>Delivery</h2>
+	      <h2>Delivery Submission</h2>
 
               <div class="card">
                 <div class="card-body">
@@ -34,18 +34,42 @@
                       </div>			
 		    </div>
 
-		    {{-- ケイパビリティ  --}}
+                    {{-- ケイパビリティDEFAUOT  --}}
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+				<label for="exampleFormControlSelect1">Default Capability</label>
+				<div style="width:100%; display:inline-block;">
+					{{-- defalut capabilityをroop  --}}
+					<?php
+					for($i=1; $i<5; $i++){
+					?>
+						<span style="margin-right:5px; color:white; background-color:orange; padding:5px 8px; border-radius:5px;">Domain Expertise </span>
+					<?php
+					}
+					?>
+				</div>
+                        </div>
+                      </div>
+                    </div>
+
+		    {{-- ケイパビリティOPTION  --}}
                     <div class="row">
                       <div class="col-md-12">
   			<div class="form-group">
-    			<label for="exampleFormControlSelect1">Capability select</label>
+    			<label for="exampleFormControlSelect1">Capability Option</label>
     			<select class="form-control" id="exampleFormControlSelect1">
-      				<option>1</option>
-      				<option>2</option>
-      				<option>3</option>
-      				<option>4</option>
-      				<option>5</option>
+      				<option>Domain Expertise</option>
+      				<option>Domain Expertise</option>
+      				<option>Research Model</option>
+      				<option>Designing Experiment</option>
+      				<option>Data Science Analytics</option>
     			</select>
+
+			<div style="display:inline-block; margin-top:10px;">
+				<span style="margin-right:5px; color:white; background-color:orange; padding:5px 8px; border-radius:5px;">Domain Expertise </span>
+			</div>
+
   			</div>
                       </div>
                     </div>
@@ -67,11 +91,10 @@
                         <div class="form-group">
                         <label for="exampleFormControlSelect1">Reviewer select</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                                <option>Homma</option>
+                                <option>Ainai</option>
+                                <option>Asano</option>
+                                <option>Oono</option>
                         </select>
                         </div>
                       </div>

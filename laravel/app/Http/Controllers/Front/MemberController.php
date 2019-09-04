@@ -40,4 +40,25 @@ class MemberController extends Controller
     }
     //
 
+    public function edit(Request $req)
+    {
+
+        //更新
+        if($req->isMethod('post')){
+                $params = $req->all();
+                $user = \App\User::find($req['user_id']);
+                $user->name = $params['name'];
+                $user->email = $params['email'];
+                $user->save();
+
+                \Session::flash('flash_message', 'Update Completed');
+                return redirect('/profile');
+
+        }
+
+        return view('front.site.user.input');
+
+    }
+    //
+
 }

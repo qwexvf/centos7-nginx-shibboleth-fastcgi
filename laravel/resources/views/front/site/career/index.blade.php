@@ -43,7 +43,7 @@
               </div>
 	      {{-- card end  --}}
 
-	      <h2>Basic Conpetency</h2>
+	      <h2>Bi-disciplinary Expertise</h2>
 		<button class="btn btn-info">Domain Expertise (Core Domain)</button>
                 <button class="btn btn-info">Research Model</button>
                 <button class="btn btn-info">Designing Experiment</button>
@@ -54,7 +54,7 @@
                 <button class="btn btn-info">Hypothesis Development</button>
                 <button class="btn btn-info">Research Verification</button>
 
-	      <h2>Conpetency Set</h2>
+	      <h2>Problem Discobery / BreakThrough / Application </h2>
                 <button class="btn btn-warning">Issue Understanding</button>
                 <button class="btn btn-warning">Analytical Thinking</button>
                 <button class="btn btn-warning">Evaluating & Reflecting</button>

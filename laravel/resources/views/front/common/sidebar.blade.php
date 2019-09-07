@@ -18,72 +18,56 @@
       <div class="sidebar-wrapper" style="color:white;">
         <ul class="nav">
 
+{{--
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link" href="/">
-              <i class="material-icons">dashboard</i>
+            <a class="nav-link @if (Request::is('/application')) active @endif" href="/">
               <p style="color:white; display:inline;">Allication ＋
               </p>
             </a>
           </li>
+--}}
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link" href="/">
-              <i class="material-icons">dashboard</i>
+            <a class="nav-link @if (Request::is('/')) active @endif" href="/">
               <p style="color:white; display:inline;">Dashboard 
-		@if (Request::is('/'))
-		<span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
-		@endif
 	      </p>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link" href="/info">
-              <i class="material-icons">dashboard</i>
-              <p style="color:white; width:100px; display:inline;">Information</p>
-                @if (Request::is('info*')) 
-                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
-                @endif
+            <a class="nav-link @if (Request::is('info*')) active @endif" href="/info">
+              <p style="color:white; width:100px; display:inline;" >Information</p>
+              <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link" href="/career">
-              <i class="material-icons">person</i>
+            <a class="nav-link @if (Request::is('career*')) active @endif" href="/career">
               <p style="color:white; display:inline;">CareerVision</p>
-                @if (Request::is('career*'))
-                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
-                @endif
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link" href="/course">
-              <i class="material-icons">bubble_chart</i>
+            <a class="nav-link @if (Request::is('course*')) active @endif" href="/course">
               <p style="color:white; display:inline;">Course</p>
-                @if (Request::is('course*'))
-                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
-                @endif
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link" href="/capability">
-              <i class="material-icons">bubble_chart</i>
-              <p style="color:white; display:inline;">Capability</p>
-                @if (Request::is('capability*'))
-                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
-                @endif
+            <a class="nav-link @if (Request::is('/competence')) active @endif" href="/competency">
+              <p style="color:white; display:inline;">Competency</p>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link" href="/delivery">
-              <i class="material-icons">bubble_chart</i>
-              <p style="color:white; display:inline;">Deliverable</p>
-                @if (Request::is('delivery*'))
-                <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
-                @endif
+            <a class="nav-link @if (Request::is('delivery')) active @endif" href="/delivery">
+              <p style="color:white; display:inline;">Experience</p>
+            </a>
+          </li>
+
+          <li class="nav-item" style="height:30px;">
+            <a class="nav-link @if (Request::is('review*')) active @endif" href="/review">
+              <p style="color:white; display:inline;">Review</p>
             </a>
           </li>
 

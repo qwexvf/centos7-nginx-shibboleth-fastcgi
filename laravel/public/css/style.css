@@ -7,3 +7,5 @@ pre{display:none !important;}
 .sidebar{width:30%; display:inline-block; vertical-align:top;
 background-color:#001B1F;
 }
+
+.active{opacity: 0.25;}

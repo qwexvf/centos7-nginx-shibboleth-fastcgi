@@ -7,6 +7,7 @@
           <div class="row">
 
 	    <div style="width:100%; text-align:right;">
+                <button class="btn btn-info" onclick="location.href='/resume/'">Resume</button>
 	    	<button class="btn btn-info" onclick="location.href='/profile/edit'">Edit Profile</button>
 	    </div>
 

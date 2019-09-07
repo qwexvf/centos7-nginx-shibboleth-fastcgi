@@ -40,6 +40,7 @@ Route::any('/career/list', function(){
 
 //プロフィール
 Route::any('/profile', 'Front\MemberController@index')->middleware('user');
+Route::any('/profile/edit', 'Front\MemberController@edit')->middleware('user');
 
 //お問い合わせ
 Route::get('/contact', 'Front\ContactController@index');
@@ -57,7 +58,15 @@ Route::get('/delivery/', 'Front\DeliveryController@index');
 Route::get('/delivery/detail/{id}', 'Front\DeliveryController@detail');
 
 //ケイパビリティ
-Route::get('/capability/', 'Front\CapabilityController@index');
-Route::get('/capability/{id}', 'Front\CapabilityController@detail');
+Route::get('/competency/', 'Front\CompetencyController@index');
+Route::get('/competency/{id}', 'Front\CompetencyController@detail');
+
+//レビュー
+Route::get('/review/', 'Front\ReviewController@index');
+
+//Resume
+Route::get('/resume/', 'Front\ResumeController@index');
+Route::any('/resume/edit', 'Front\ResumeController@edit')->middleware('user');
+
 
 

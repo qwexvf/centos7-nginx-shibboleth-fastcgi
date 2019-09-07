@@ -69,4 +69,45 @@ Route::get('/resume/', 'Front\ResumeController@index');
 Route::any('/resume/edit', 'Front\ResumeController@edit')->middleware('user');
 
 
+/*----------------------------
+管理者画面
+-----------------------------*/
+Route::get('/faoeiohafhieaoie/login/', 'Admin\LoginController@index');
+Route::get('/faoeiohafhieaoie/', 'Admin\TopController@index');
+
+//学生
+Route::get('/faoeiohafhieaoie/student/list', 'Admin\StudentController@index');
+Route::get('/faoeiohafhieaoie/student/detail/{id}', 'Admin\StudentController@detail');
+Route::get('/faoeiohafhieaoie/student/edit/{id}', 'Admin\StudentController@edit');
+Route::get('/faoeiohafhieaoie/resume/detail/{id}', 'Admin\ResumeController@detail');
+
+//成果物
+Route::get('/faoeiohafhieaoie/experience/list', 'Admin\ExperienceController@index');
+Route::get('/faoeiohafhieaoie/experience/detail/{id}', 'Admin\ExperienceController@detail');
+Route::get('/faoeiohafhieaoie/experience/edit/{id}', 'Admin\ExperienceController@edit');
+
+//コンピテンシー
+Route::get('/faoeiohafhieaoie/competency/list', 'Admin\CompetencyController@index');
+Route::get('/faoeiohafhieaoie/competency/detail/{id}', 'Admin\CompetencyController@detail');
+Route::get('/faoeiohafhieaoie/competency/edit/{id}', 'Admin\CompetencyController@edit');
+
+//キャリア
+Route::get('/faoeiohafhieaoie/career/list', 'Admin\CareerController@index');
+Route::get('/faoeiohafhieaoie/career/detail/{id}', 'Admin\CareerController@detail');
+Route::get('/faoeiohafhieaoie/career/edit/{id}', 'Admin\CareerController@edit');
+
+//教員
+Route::get('/faoeiohafhieaoie/teacher/list', 'Admin\TeacherController@index');
+Route::get('/faoeiohafhieaoie/teacher/detail/{id}', 'Admin\TeacherController@detail');
+Route::get('/faoeiohafhieaoie/teacher/edit/{id}', 'Admin\TeacherController@edit');
+
+//管理ユーザ
+Route::get('/faoeiohafhieaoie/user/list', 'Admin\UserController@index');
+Route::get('/faoeiohafhieaoie/user/detail/{id}', 'Admin\UserController@detail');
+Route::get('/faoeiohafhieaoie/user/edit/{id}', 'Admin\UserController@edit');
+
+
+
+
+
 

@@ -1,0 +1,10 @@
+@extends('front.common.app')
+{{-- @include('front.common.head') --}}
+@section('content')
+        @include('front.common.sidebar')
+        <div class="block">
+             <h2 class="title" style="float:left; color:#55a3fc;">ダッシュボード</h2>
+	</div>
+
+@endsection
+~                  

@@ -47,7 +47,7 @@
 
           <li class="nav-item" style="height:30px;">
             <a class="nav-link @if (Request::is('experience*')) active @endif" href="/faoeiohafhieaoie/competency/list">
-              <p style="color:white; display:inline;">Competency(未)</p>
+              <p style="color:white; display:inline;">Competency(途)</p>
             </a>
           </li>
 

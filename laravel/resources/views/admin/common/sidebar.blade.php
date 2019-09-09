@@ -34,37 +34,37 @@
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link @if (Request::is('student*')) active @endif" href="/student">
-              <p style="color:white; display:inline;">Student（途）</p>
+            <a class="nav-link @if (Request::is('student*')) active @endif" href="/faoeiohafhieaoie/student/list">
+              <p style="color:white; display:inline;">Student</p>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/experience/list">
-              <p style="color:white; display:inline;">Experience(未)</p>
+            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/faoeiohafhieaoie/experience/list">
+              <p style="color:white; display:inline;">Experience</p>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/competency/list">
+            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/faoeiohafhieaoie/competency/list">
               <p style="color:white; display:inline;">Competency(未)</p>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/career/list">
+            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/faoeiohafhieaoie/career/list">
               <p style="color:white; display:inline;">CareerVision(未)</p>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/teacher/list">
+            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/faoeiohafhieaoie/teacher/list">
               <p style="color:white; display:inline;">Teacher(未)</p>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/user/list">
+            <a class="nav-link @if (Request::is('experience*')) active @endif" href="/faoeiohafhieaoie/user/list">
               <p style="color:white; display:inline;">AdminUser(未)</p>
             </a>
           </li>

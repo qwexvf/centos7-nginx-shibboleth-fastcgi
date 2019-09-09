@@ -82,9 +82,9 @@ Route::get('/faoeiohafhieaoie/student/edit/{id}', 'Admin\StudentController@edit'
 Route::get('/faoeiohafhieaoie/resume/detail/{id}', 'Admin\ResumeController@detail');
 
 //成果物
-Route::get('/faoeiohafhieaoie/experience/list', 'Admin\ExperienceController@index');
-Route::get('/faoeiohafhieaoie/experience/detail/{id}', 'Admin\ExperienceController@detail');
-Route::get('/faoeiohafhieaoie/experience/edit/{id}', 'Admin\ExperienceController@edit');
+Route::get('/faoeiohafhieaoie/experience/list', 'Admin\DeliveryController@index');
+Route::get('/faoeiohafhieaoie/experience/detail/{id}', 'Admin\DeliveryController@detail');
+Route::get('/faoeiohafhieaoie/experience/edit/{id}', 'Admin\DeliveryController@edit');
 
 //コンピテンシー
 Route::get('/faoeiohafhieaoie/competency/list', 'Admin\CompetencyController@index');
@@ -106,7 +106,13 @@ Route::get('/faoeiohafhieaoie/user/list', 'Admin\UserController@index');
 Route::get('/faoeiohafhieaoie/user/detail/{id}', 'Admin\UserController@detail');
 Route::get('/faoeiohafhieaoie/user/edit/{id}', 'Admin\UserController@edit');
 
-
+/*----------------------------
+共通参照画面
+-----------------------------*/
+Route::get('/faoeiohafhieaoie/review/detail/{id}', 'Admin\ReviewController@index');
+Route::get('/faoeiohafhieaoie/resume/detail/{id}', 'Admin\ResumeController@index');
+Route::get('/faoeiohafhieaoie/delivery/', 'Admin\DeliveryController@index');
+Route::get('/faoeiohafhieaoie/delivery/detail/{id}', 'Admin\DeliveryController@detail');
 
 
 

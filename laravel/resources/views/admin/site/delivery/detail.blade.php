@@ -1,5 +1,6 @@
 
-@extends('front.common.app')
+@extends('admin.common.app')
+
 @section('content')
       {{-- Content Start --}}
       <div class="content">
@@ -7,7 +8,7 @@
           <div class="row">
 
             <div class="col-md-8">
-	      <h2>Delivery</h2>
+	      <h2>Experience</h2>
 
               <div class="card">
                 <div class="card-body">

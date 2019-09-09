@@ -27,7 +27,8 @@ class StudentController extends Controller
     public function detail(Request $req)
     {
 
-        return view('front.site.delivery.detail');
+
+        return view('admin.site.student.detail');
 
     }
     //

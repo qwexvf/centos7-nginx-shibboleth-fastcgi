@@ -9,9 +9,13 @@
         <div class="col-12 ml-12">
    	      <h2>Student</h2>
 
+              <div style="width:100%; text-align:right;">
+                  <button class="btn btn-info">PickupList</button>
+              </div>
+
+{{--
               <div class="card" style="margin-top:5px;">
               <div class="card-body">
-
 	      <form>
   		<div class="form-group">
     		<label for="exampleFormControlSelect1">Sorting</label>
@@ -22,9 +26,9 @@
     		</select>
   		</div>
 	      </form>
-
 	      </div>
               </div>
+--}}
 
               <div class="card">
                 <div class="card-body">
@@ -40,10 +44,16 @@
 			   Mentor
                         </th>
                         <th>
-                           Condition
+                           <a href="" style="color:#00bcd4;">TotalView ↓</a>
                         </th>
                         <th>
-                           TotalProgress
+                           <a href="" style="color:#00bcd4;">LastLogin</a>
+                        </th>
+                        <th>
+                           <a href="" style="color:#00bcd4;">Condition</a>
+                        </th>
+                        <th>
+                           <a href="" style="color:#00bcd4;">TotalProgress</a>
                         </th>
                         <th>
                         </th>
@@ -64,14 +74,20 @@
                                 Homma Test
                           </td>
                           <td>
-				<span style="font-size:35px; color:#1e90fa;">↑</span>
+                                <span style="font-size:20px;">112</span>
                           </td>
                           <td>
-                                <span style="font-size:30px; color:#1e90fa;">60%</span>
+                                <span style="font-size:20px;">2019-10-01</span>
+                          </td>
+                          <td>
+				<span style="font-size:35px; color:#1e90fa; text-align:center; width:100%;">↑</span>
+                          </td>
+                          <td>
+                                <span style="font-size:30px; color:#1e90fa; text-align:center; width:100%;">60%</span>
                           </td>
                           <td>
 				<button type="button" class="btn btn-info"
-				onclick="location.href='/delivery/detail/1'">Detail</button>
+				onclick="location.href='/faoeiohafhieaoie/student/detail/1'">Detail</button>
                           </td>
 			  <?php
 			  }

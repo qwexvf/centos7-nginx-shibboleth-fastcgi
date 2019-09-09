@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -22,7 +22,7 @@ class DeliveryController extends Controller
     public function input(Request $req)
     {
 
-	return view('front.site.delivery.input');
+	return view('admin.site.delivery.input');
 
     }
     //
@@ -30,7 +30,7 @@ class DeliveryController extends Controller
     public function index(Request $req)
     {
 
-        return view('front.site.delivery.index');
+        return view('admin.site.delivery.index');
 
     }
     //
@@ -38,7 +38,7 @@ class DeliveryController extends Controller
     public function detail(Request $req)
     {
 
-        return view('front.site.delivery.detail');
+        return view('admin.site.delivery.detail');
 
     }
     //

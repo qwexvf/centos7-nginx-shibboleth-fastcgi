@@ -20,15 +20,15 @@
 --}}
 
           <li class="nav-item" style="height:30px;">
-            <a class="nav-link @if (Request::is('/')) active @endif" href="/">
-              <p style="color:white; display:inline;">Dashboard 
+            <a class="nav-link @if (Request::is('/')) active @endif" href="">
+              <p style="color:white; display:inline;">Dashboard（未）
 	      </p>
             </a>
           </li>
 
           <li class="nav-item" style="height:30px;">
             <a class="nav-link @if (Request::is('info*')) active @endif" href="/info">
-              <p style="color:white; width:100px; display:inline;" >Information</p>
+              <p style="color:white; width:100px; display:inline;" >Information(未)</p>
               <span style="color:#ED6D1F; margin-left:10px; font-size:20px;">●</span>
             </a>
           </li>

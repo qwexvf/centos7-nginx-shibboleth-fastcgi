@@ -50,6 +50,9 @@
                            <a href="" style="color:#00bcd4;">LastLogin</a>
                         </th>
                         <th>
+                           <a href="" style="color:#00bcd4;">StayTime</a>
+                        </th>
+                        <th>
                            <a href="" style="color:#00bcd4;">Condition</a>
                         </th>
                         <th>
@@ -78,6 +81,9 @@
                           </td>
                           <td>
                                 <span style="font-size:20px;">2019-10-01</span>
+                          </td>
+                          <td>
+                                <span style="font-size:20px;">15:10</span>
                           </td>
                           <td>
 				<span style="font-size:35px; color:#1e90fa; text-align:center; width:100%;">↑</span>

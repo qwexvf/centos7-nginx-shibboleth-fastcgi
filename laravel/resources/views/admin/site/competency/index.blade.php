@@ -16,8 +16,8 @@
                 <div class="form-group col-md-4">
                 <label for="exampleFormControlSelect1">Category</label>
                 <select class="form-control" name="sort">
-                        <option>TESTTEST1</option>
-                        <option>TESTTEST2</option>
+                        <option>Domain Expertise</option>
+                        <option>Domain Expertise</option>
                 </select>
                 </div>
 
@@ -29,6 +29,11 @@
               <div style="width:100%; text-align:left;">
                   <button class="btn btn-info" onclick="location.href=''" style="background-color:#808080; box-shadow:none;">Reset</button>
                   <button class="btn btn-info" onclick="location.href=''">Search</button>
+              </div>
+
+              <div style="width:100%; text-align:right;">
+                  <button class="btn btn-info" onclick="location.href=''">CSV Export</button>
+                  <button class="btn btn-info" onclick="location.href=''">CSV Import</button>
               </div>
 
               <div class="card">
@@ -54,7 +59,7 @@
 			?>
                         <tr>
                           <td>
-				TESTTEST1
+				Domain Expertise
                           </td>
                           <td>
                                 Listening
@@ -63,8 +68,12 @@
                                 Display
                           </td>
                           <td>
+{{--
 				<button type="button" class="btn btn-info"
 				onclick="location.href='/faoeiohafhieaoie/competency/detail/1'">Detail</button>
+--}}
+                                <button type="button" class="btn btn-info"
+                                onclick="location.href=''">Detail</button>
                           </td>
 			  <?php
 			  }

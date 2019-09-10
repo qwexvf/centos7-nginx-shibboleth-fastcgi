@@ -12,7 +12,7 @@
 			for($i=1; $i<10; $i++){
 			?>
 			<div class="col-6">
-				<a href="/capability/1">
+				<a href="/competency/1">
             			<div class="card" style="background-color:white;">
 	                		<div class="card-body">
 						<h4>Domain Expertise </h4>

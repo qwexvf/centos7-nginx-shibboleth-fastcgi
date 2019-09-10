@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -19,7 +19,7 @@ class InfoController extends Controller
     *********************************/
     public function index(Request $req)
     {
-	return view('front.site.info.index');
+	return view('admin.site.info.index');
     } 
     //
 

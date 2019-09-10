@@ -61,7 +61,7 @@
 
           <li class="nav-item" style="height:30px;">
             <a class="nav-link @if (Request::is('delivery')) active @endif" href="/delivery">
-              <p style="color:white; display:inline;">Experience</p>
+              <p style="color:white; display:inline;">Learning Outcomes</p>
             </a>
           </li>
 

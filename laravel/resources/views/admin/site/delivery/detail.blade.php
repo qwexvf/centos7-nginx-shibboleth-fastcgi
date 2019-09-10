@@ -8,7 +8,7 @@
           <div class="row">
 
             <div class="col-md-8">
-	      <h2>Experience</h2>
+	      <h2>Learning Outcomes</h2>
 
               <div class="card">
                 <div class="card-body">

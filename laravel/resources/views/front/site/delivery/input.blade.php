@@ -7,7 +7,7 @@
           <div class="row">
 
             <div class="col-md-8">
-	      <h2>Delivery Submission</h2>
+	      <h2>Submission Learning Outcomes</h2>
 
               <div class="card">
                 <div class="card-body">

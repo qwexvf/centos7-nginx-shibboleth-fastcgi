@@ -75,6 +75,9 @@ Route::any('/resume/edit', 'Front\ResumeController@edit')->middleware('user');
 Route::get('/faoeiohafhieaoie/login/', 'Admin\LoginController@index');
 Route::get('/faoeiohafhieaoie/', 'Admin\TopController@index');
 
+//お知らせ
+Route::get('/faoeiohafhieaoie/info/list', 'Admin\InfoController@index');
+
 //学生
 Route::get('/faoeiohafhieaoie/student/list', 'Admin\StudentController@index');
 Route::get('/faoeiohafhieaoie/student/detail/{id}', 'Admin\StudentController@detail');
@@ -96,10 +99,10 @@ Route::get('/faoeiohafhieaoie/career/list', 'Admin\CareerController@index');
 Route::get('/faoeiohafhieaoie/career/detail/{id}', 'Admin\CareerController@detail');
 Route::get('/faoeiohafhieaoie/career/edit/{id}', 'Admin\CareerController@edit');
 
-//教員
-Route::get('/faoeiohafhieaoie/teacher/list', 'Admin\TeacherController@index');
-Route::get('/faoeiohafhieaoie/teacher/detail/{id}', 'Admin\TeacherController@detail');
-Route::get('/faoeiohafhieaoie/teacher/edit/{id}', 'Admin\TeacherController@edit');
+//メンター
+Route::get('/faoeiohafhieaoie/memtor/list', 'Admin\MemtorController@index');
+Route::get('/faoeiohafhieaoie/memtor/detail/{id}', 'Admin\MemtorController@detail');
+Route::get('/faoeiohafhieaoie/memtor/edit/{id}', 'Admin\MemtorController@edit');
 
 //管理ユーザ
 Route::get('/faoeiohafhieaoie/user/list', 'Admin\UserController@index');

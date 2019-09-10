@@ -113,8 +113,30 @@
                   </div>
                 </div>
               </div>
+            </div>
+
+            {{-- NextAction  --}}
+            <div class="col-md-12 col-sm-12">
+
+              <h2>NextAction</h2>
+
+              <div class="card" style="margin-top:5px;">
+                <div class="card-body" style="height:200px;">
+                    <div class="row">
+                      <div class="col-md-12">
+                                <div class="row">
+                                        <div class="col-md-12">
+The system further includes a determination section for determining the next action of at least one of the plurality of factors in accordance with the value of the parameter Act.
+                                        </div>
+                                </div>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
 
             </div>
+	    {{-- End --}}
 
 	  </div>
 

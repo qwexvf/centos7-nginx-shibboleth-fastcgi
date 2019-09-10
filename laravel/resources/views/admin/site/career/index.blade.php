@@ -1,76 +1,91 @@
 
-@extends('front.common.app')
+@extends('admin.common.app')
+
 @section('content')
       {{-- Content Start --}}
       <div class="content">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
 
-	    <button class="btn btn-info" onclick="location.href='/career/list'">To CareerVision List</button>
-	    <button class="btn btn-warning">Already set</button>
+        <div class="col-12 ml-12">
+   	      <h2>CareerVision</h2>
 
-	    <div class="card" style="background-color:#001B1F; color:white;">
-  		<div class="card-body">	
-			<h4 style="margin:0px;">The Top 25 Managers of the Year</h4>
+              <div style="width:100%; text-align:right;">
+                  <button class="btn btn-info">CSV Export</button>
+                  <button class="btn btn-info">CSV Import</button>
+              </div>
+
+{{--
+              <div class="card" style="margin-top:5px;">
+              <div class="card-body">
+	      <form>
+  		<div class="form-group">
+    		<label for="exampleFormControlSelect1">Sorting</label>
+    		<select class="form-control" name="sort">
+      			<option>Recent</option>
+                        <option>Condition</option>
+                        <option>ExpericneVolume</option>
+    		</select>
   		</div>
-	    </div>
+	      </form>
+	      </div>
+              </div>
+--}}
 
               <div class="card">
-                <div class="card-body" style="height:300px;">
-                    <div class="row">
-                      <div class="col-md-2">
-				<img src="https://weblio.hs.llnwd.net/e7/img/dict/binbi/bima004a.png" style="width:100%; height:auto; border-radius:5px;">
-                      </div>
-
-
-                      <div class="col-md-7">
-				<div class="row">
-					<div class="col-md-12" style="height:50px;">
-						<h2>Michael Dell</h2>
-					</div>
-
-                                        <div class="col-md-12">
-						<p>1984年、19歳の頃に、わずか1,000ドルの資金を元手に学生寮の自室でコンピュータ会社「PC's Limited」を起業。同年に大学を中退し、本格的な会社の経営に乗り出す。
-「販売店やディーラーを介さず、注文生産の製品を直接顧客に販売する」というコンピュータ業界初の直販制度を採用したことで会社は急成長を遂げ、1988年には24歳の若さで NASDAQ に株式公開を果たした[4]。同年に社名を「デル・コンピュータ」と改める。1992年に会社はフォーチュン500入りを果たし、デルはフォーチュン500社中最も若い最高経営責任者になった[5]。2003年には製品ラインを拡大し社名を「デル」に改名[6]。
-2013年2月には、企業買収ファンドと一緒にデルを自ら買収（レバレッジド・バイアウト）することを発表している[9]。</p>
-                                        </div>
-				</div>
-                      </div>
-                    </div>
-
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text">
+                        <th>
+                        </th>
+                        <th>
+                           Name
+                        </th>
+                        <th>
+			   Status
+                        </th>
+                        <th>
+			   Created_at
+                        </th>
+                        <th>
+                        </th>
+                      </thead>
+                      <tbody>
+			<?php 
+			for($i=1; $i<25; $i++){
+			?>
+                        <tr>
+                          <td>
+                                <img src="https://d3cmdai71kklhc.cloudfront.net/post_watermark_sp_320/marketplace/38237/mp_20170517-231534959_ex5j8.jpg"
+ 				style="width:100px; height:100px; border-radius:100%;">
+                          </td>
+                          <td>
+			       TestCareerVision
+                          </td>
+                          <td>
+                                Display
+                          </td>
+                          <td>
+				2019-10-01
+                          </td>
+                          <td>
+				<button type="button" class="btn btn-info"
+				onclick="location.href='/faoeiohafhieaoie/career/detail/1'">Detail</button>
+                          </td>
+			  <?php
+			  }
+			  ?>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
-	      {{-- card end  --}}
 
-	      <h2>Bi-disciplinary Expertise</h2>
-		<button class="btn btn-info">Domain Expertise (Core Domain)</button>
-                <button class="btn btn-info">Research Model</button>
-                <button class="btn btn-info">Designing Experiment</button>
-                <button class="btn btn-info">Data Science Analytics</button>
-                <button class="btn btn-info">Data Management and Curation</button>
-                <button class="btn btn-info">Conducting Analysis</button>
-                <button class="btn btn-info">Patterns Identification</button>
-                <button class="btn btn-info">Hypothesis Development</button>
-                <button class="btn btn-info">Research Verification</button>
-
-	      <h2>Problem Discobery / BreakThrough / Application </h2>
-                <button class="btn btn-warning">Issue Understanding</button>
-                <button class="btn btn-warning">Analytical Thinking</button>
-                <button class="btn btn-warning">Evaluating & Reflecting</button>
-                <button class="btn btn-warning">Flexible Thinking</button>
-                <button class="btn btn-warning">Accurate self-perception</button>
-                <button class="btn btn-warning">Leveraging self-strength</button>
-                <button class="btn btn-warning">Negotiating</button>
-                <button class="btn btn-warning">Perspective-Taking</button>
-                <button class="btn btn-warning">Achievement Focus</button>
-                <button class="btn btn-warning">Executing</button>
+	</div>
 
 
 
-	      </div>
-            </div>
-          </div>
         </div>
       </div>
       {{-- Content End --}}

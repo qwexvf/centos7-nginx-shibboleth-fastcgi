@@ -1,5 +1,6 @@
 
-@extends('front.common.app')
+@extends('admin.common.app')
+
 @section('content')
       {{-- Content Start --}}
       <div class="content">

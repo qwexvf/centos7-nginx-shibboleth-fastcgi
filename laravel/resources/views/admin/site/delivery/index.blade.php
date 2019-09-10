@@ -7,7 +7,7 @@
         <div class="container-fluid">
 
         <div class="col-12 ml-12">
-   	      <h2>Experience</h2>
+   	      <h2>Learning Outcomes</h2>
 
               <div class="card" style="margin-top:5px;">
               <div class="card-body">

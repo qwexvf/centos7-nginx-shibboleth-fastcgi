@@ -1,121 +1,87 @@
 
-@extends('front.common.app')
+@extends('admin.common.app')
+
 @section('content')
       {{-- Content Start --}}
       <div class="content">
         <div class="container-fluid">
-          <div class="row">
 
-	    <div style="width:100%; text-align:right;">
-                <button class="btn btn-info" onclick="location.href='/resume/'">Resume</button>
-	    	<button class="btn btn-info" onclick="location.href='/profile/edit'">Edit Profile</button>
-	    </div>
+        <div class="col-12 ml-12">
+   	      <h2>AdminUser</h2>
 
-            <div class="col-md-12">
+              <div style="width:100%; text-align:right;">
+                  <button class="btn btn-info">Add User</button>
+              </div>
 
-	      <h2>Profile</h2>
+{{--
+              <div class="card" style="margin-top:5px;">
+              <div class="card-body">
+	      <form>
+  		<div class="form-group">
+    		<label for="exampleFormControlSelect1">Sorting</label>
+    		<select class="form-control" name="sort">
+      			<option>Recent</option>
+                        <option>Condition</option>
+                        <option>ExpericneVolume</option>
+    		</select>
+  		</div>
+	      </form>
+	      </div>
+              </div>
+--}}
 
               <div class="card">
-                <div class="card-body" style="height:300px;">
-		    <div class="row" style="margin-top:20px;">
-
-		    <div class="col-md-3">
-			<img src="https://d3cmdai71kklhc.cloudfront.net/post_watermark_sp_320/marketplace/38237/mp_20170517-231534959_ex5j8.jpg"
-          style="border-radius:100%; width:200px; height:200px;">
-		    </div>
-
-
-		    <div class="col-md-8">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control" name="name" value="Homma" readonly>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control" name="email" value="hogehoge@gmail.com" readonly>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6" style="margin-top:20px;">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">BirthDay</label>
-                          <input type="email" class="form-control" name="email" value="1991-10-01" readonly>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6" style="margin-top:20px;">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">National</label>
-                          <input type="email" class="form-control" name="email" value="Japan" readonly>
-                        </div>
-                      </div>
-
-                    </div>
-
-		    </div>
-		    </div>
-		    {{-- end row --}}
-
-                </div>
-              </div>
-
-              <div class="row">
-              <div class="col-md-6">
-
-	      <h2>Mentor</h2>
-
-              <div class="card" style="margin-top:20px; height:400px;">
                 <div class="card-body">
-                    <div class="row" style="padding-top:20px;">
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control" name="name" value="Homma" readonly>
-                        </div>
-                      </div>
-                    </div>
-
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text">
+                        <th>
+                           Name
+                        </th>
+                        <th>
+			   Email
+                        </th>
+                        <th>
+			   Status
+                        </th>
+                        <th>
+                           Created_at
+                        </th>
+                        <th>
+                        </th>
+                      </thead>
+                      <tbody>
+			<?php 
+			for($i=1; $i<25; $i++){
+			?>
+                        <tr>
+                          <td>
+				Homma Test
+                          </td>
+                          <td>
+                                test@gmail.com
+                          </td>
+                          <td>
+				2019-01-10
+                          </td>
+                          <td>
+				<button type="button" class="btn btn-info"
+				onclick="location.href='/faoeiohafhieaoie/student/detail/1'">Detail</button>
+                          </td>
+			  <?php
+			  }
+			  ?>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
-	      </div>
 
-              <div class="col-md-6">
-
-	       <h2>History</h2>
-
-              <div class="card" style="margin-top:20px; height:400px;">
-                <div class="card-body">
-                    <div class="row" style="padding-top:20px;">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">University</label>
-                          <input type="text" class="form-control" name="name" value="Waseda University" readonly>
-                        </div>
-                      </div>
-
-                      <div class="col-md-12" style="margin-top:20px;">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">High School</label>
-                          <input type="email" class="form-control" name="email" value="Hadano High School" readonly>
-                        </div>
-                      </div>
-                    </div>
-
-                </div>
-              </div>
-              </div>
+	</div>
 
 
 
-	      </div>
-
-            </div>
-          </div>
         </div>
       </div>
       {{-- Content End --}}

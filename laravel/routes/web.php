@@ -72,42 +72,66 @@ Route::any('/resume/edit', 'Front\ResumeController@edit')->middleware('user');
 /*----------------------------
 管理者画面
 -----------------------------*/
-Route::get('/faoeiohafhieaoie/login/', 'Admin\LoginController@index');
-Route::get('/faoeiohafhieaoie/', 'Admin\TopController@index');
+Route::get('/'.\Config::get('common.admin_url').'/login/', 'Admin\LoginController@index')->name('admin.login');
 
 //お知らせ
-Route::get('/faoeiohafhieaoie/info/list', 'Admin\InfoController@index');
+Route::get('/'.\Config::get('common.admin_url').'/info/list', 'Admin\InfoController@index')->name('admin.informations.list');
 
 //学生
-Route::get('/faoeiohafhieaoie/student/list', 'Admin\StudentController@index');
-Route::get('/faoeiohafhieaoie/student/detail/{id}', 'Admin\StudentController@detail');
-Route::get('/faoeiohafhieaoie/student/edit/{id}', 'Admin\StudentController@edit');
-Route::get('/faoeiohafhieaoie/resume/detail/{id}', 'Admin\ResumeController@detail');
+Route::get('/'.\Config::get('common.admin_url').'/student/list', 'Admin\StudentController@index')->name('admin.students.list');
+Route::get('/'.\Config::get('common.admin_url').'/student/detail/{id}', 'Admin\StudentController@detail')->name('admin.students.detail');
+Route::get('/'.\Config::get('common.admin_url').'/student/edit/{id}', 'Admin\StudentController@edit')->name('admin.students.edit');
+Route::get('/'.\Config::get('common.admin_url').'/resume/detail/{id}', 'Admin\ResumeController@detail')->name('admin.students.resume');
 
 //成果物
-Route::get('/faoeiohafhieaoie/experience/list', 'Admin\DeliveryController@index');
-Route::get('/faoeiohafhieaoie/experience/detail/{id}', 'Admin\DeliveryController@detail');
-Route::get('/faoeiohafhieaoie/experience/edit/{id}', 'Admin\DeliveryController@edit');
+Route::get('/'.\Config::get('common.admin_url').'/list', 'Admin\DeliveryController@index')->name('admin.experiences.list');
+Route::get('/'.\Config::get('common.admin_url').'/experience/detail/{id}', 'Admin\DeliveryController@detail')->name('admin.experiences.detail');
+Route::get('/'.\Config::get('common.admin_url').'/experience/edit/{id}', 'Admin\DeliveryController@edit')->name('admin.experiences.edit');
 
 //コンピテンシー
-Route::get('/faoeiohafhieaoie/competency/list', 'Admin\CompetencyController@index');
-Route::get('/faoeiohafhieaoie/competency/detail/{id}', 'Admin\CompetencyController@detail');
-Route::get('/faoeiohafhieaoie/competency/edit/{id}', 'Admin\CompetencyController@edit');
+Route::get('/'.\Config::get('common.admin_url').'/competency/list', 'Admin\CompetencyController@index')->name('admin.competencies.list');
+Route::get('/'.\Config::get('common.admin_url').'/competency/detail/{id}', 'Admin\CompetencyController@detail')->name('admin.competencies.detail');
+Route::get('/'.\Config::get('common.admin_url').'/competency/edit/{id}', 'Admin\CompetencyController@edit')->name('admin.competencies.edit');
 
 //キャリア
-Route::get('/faoeiohafhieaoie/career/list', 'Admin\CareerController@index');
-Route::get('/faoeiohafhieaoie/career/detail/{id}', 'Admin\CareerController@detail');
-Route::get('/faoeiohafhieaoie/career/edit/{id}', 'Admin\CareerController@edit');
+Route::get('/'.\Config::get('common.admin_url').'/career/list', 'Admin\CareerController@index')->name('admin.careers.list');
+Route::get('/'.\Config::get('common.admin_url').'/career/detail/{id}', 'Admin\CareerController@detail')->name('admin.careers.detail');
+Route::get('/'.\Config::get('common.admin_url').'/career/edit/{id}', 'Admin\CareerController@edit')->name('admin.careers.edit');
 
 //メンター
-Route::get('/faoeiohafhieaoie/memtor/list', 'Admin\MemtorController@index');
-Route::get('/faoeiohafhieaoie/memtor/detail/{id}', 'Admin\MemtorController@detail');
-Route::get('/faoeiohafhieaoie/memtor/edit/{id}', 'Admin\MemtorController@edit');
+Route::get('/'.\Config::get('common.admin_url').'/memtor/list', 'Admin\MemtorController@index')->name('admin.mentors.list');
+Route::get('/'.\Config::get('common.admin_url').'/memtor/detail/{id}', 'Admin\MemtorController@detail')->name('admin.mentors.detail');
+Route::get('/'.\Config::get('common.admin_url').'/memtor/edit/{id}', 'Admin\MemtorController@edit')->name('admin.mentors.edit');
 
 //管理ユーザ
-Route::get('/faoeiohafhieaoie/user/list', 'Admin\UserController@index');
-Route::get('/faoeiohafhieaoie/user/detail/{id}', 'Admin\UserController@detail');
-Route::get('/faoeiohafhieaoie/user/edit/{id}', 'Admin\UserController@edit');
+Route::get('/'.\Config::get('common.admin_url').'/user/list', 'Admin\UserController@index')->name('admin.users.list');
+Route::get('/'.\Config::get('common.admin_url').'/user/detail/{id}', 'Admin\UserController@detail')->name('admin.users.detail');
+Route::get('/'.\Config::get('common.admin_url').'/user/edit/{id}', 'Admin\UserController@edit')->name('admin.users.edit');
+
+/*----------------------------
+メンター画面
+-----------------------------*/
+//学生
+Route::get('/'.\Config::get('common.mentor_url').'/students', 'Mentor\StudentController@index')->name('mentor.students.list');
+Route::get('/'.\Config::get('common.mentor_url').'/students/{id}', 'Mentor\StudentController@detail')->name('mentor.students.detail');
+Route::get('/'.\Config::get('common.mentor_url').'/students/{id}/edit', 'Mentor\StudentController@edit')->name('mentor.students.edit');
+Route::get('/'.\Config::get('common.mentor_url').'/resumes/{id}', 'Mentor\ResumeController@detail')->name('mentor.resumes.detail');
+
+//成果物
+Route::get('/'.\Config::get('common.mentor_url').'/expericnes', 'Mentor\DeliveryController@index')->name('mentor.experiences.list');
+Route::get('/'.\Config::get('common.mentor_url').'/student/experiences/{id}', 'Mentor\DeliveryController@index')->name('mentor.experiences.student.list');
+
+Route::get('/'.\Config::get('common.mentor_url').'/experiences/{id}', 'Mentor\DeliveryController@detail')->name('mentor.experiences.detail');
+Route::get('/'.\Config::get('common.mentor_url').'/experiences/{id}/edit', 'Mentor\DeliveryController@edit')->name('mentor.experiences.edit');
+
+//レビュー
+Route::get('/'.\Config::get('common.mentor_url').'/review/{id}', 'Mentor\ReviewController@index')->name('mentor.review.detail');
+
+//レビュー
+Route::get('/'.\Config::get('common.mentor_url').'/resume/{id}', 'Mentor\ResumeController@index')->name('mentor.resume.detail');
+
+//お知らせ
+Route::get('/'.\Config::get('common.mentor_url').'/info/list', 'Mentor\InfoController@index')->name('mentor.informations.list');
 
 /*----------------------------
 共通参照画面

@@ -1,0 +1,16 @@
+[Unit]
+Description=shibresponder
+After=network.target
+Requires=shibresponder.socket
+
+[Service]
+Type=simple
+ExecStart=/usr/lib64/shibboleth/shibresponder
+User=shibd
+Group=shibd
+StandardInput=socket
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

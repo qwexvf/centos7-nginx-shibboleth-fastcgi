@@ -1,0 +1,12 @@
+[Unit]
+Description=shibauthorizer socket
+
+[Socket]
+SocketUser=shibd
+SocketGroup=shibd
+SocketMode=0660
+ListenStream=/run/shibboleth/shibauthorizer.sock
+Accept=false
+
+[Install]
+WantedBy=sockets.target<Paste>

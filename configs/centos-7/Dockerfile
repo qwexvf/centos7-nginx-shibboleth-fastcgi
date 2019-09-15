@@ -1,4 +1,41 @@
-FROM centos:centos7
+FROM centos:7
+
+
+# Install Shibboleth's recommended Service Provider repo as per
+# https://shibboleth.net/downloads/service-provider/RPMS/
+ADD configs/centos-7/shibboleth.repo /etc/yum.repos.d/shibboleth.repo
+
+# Accept Shibboleth's GPG key
+RUN rpm --import https://shibboleth.net/downloads/service-provider/RPMS/repomd.xml.key
+
+# Install EPEL for fcgi-devel
+RUN yum install -y epel-release
+
+# Install required packages for building
+RUN yum install -y \
+  make \
+  rpm-build \
+  rpmdevtools \
+  sudo \
+  yum-utils \
+  rsync
+
+# Make the build area available
+RUN mkdir -p /app/build
+
+COPY . /app
+
+# 1. Build
+# 2. Test by installing/running
+#    Remove any installed packages from previous docker-compose runs
+# 3. Copy the RPMs back to the host volume
+RUN /app/shibboleth-rebuild.sh && \
+  yum remove -y shibboleth* && \
+  yum install -y ~/rpmbuild/RPMS/x86_64/*.rpm && \
+  /usr/lib64/shibboleth/shibauthorizer && \
+  /usr/lib64/shibboleth/shibresponder && \
+  mkdir -p /app/build/centos-7/ && \
+  rsync --no-relative -vahu ~/rpmbuild/RPMS ~/rpmbuild/SRPMS /app/build/centos-7/
 
 ENV PATH $PATH:/usr/bin
 ENV container docker
@@ -14,8 +51,6 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/sbin/init"]
 
 # create nginx user
 RUN useradd -M -s /sbin/nologin nginx
@@ -71,46 +106,12 @@ RUN \
     --add-module=./nginx-http-shibboleth && \
   make && make install
 
-# Install shibboleth-fastcgi
-# Install Shibboleth's recommended Service Provider repo as per
-# https://shibboleth.net/downloads/service-provider/RPMS/
-ADD configs/shibboleth.repo /etc/yum.repos.d/shibboleth.repo
+COPY configs/services/shibauthorizer.service /lib/systemd/system/
+COPY configs/services/shibauthorizer.socket /lib/systemd/system/
+COPY configs/services/shibresponder.service /lib/systemd/system/
+COPY configs/services/shibresponder.socket /lib/systemd/system/
 
-# Accept Shibboleth's GPG key
-RUN rpm --import https://shibboleth.net/downloads/service-provider/RPMS/repomd.xml.key
+VOLUME [ "/sys/fs/cgroup" ]
+CMD ["/usr/sbin/init"]
 
-# Install EPEL for fcgi-devel
-RUN yum install -y epel-release
-
-# Install required packages for building
-RUN yum install -y \
-  make \
-  rpm-build \
-  rpmdevtools \
-  sudo \
-  yum-utils \
-  rsync
-
-# Make the build area available
-RUN mkdir -p /app/build
-
-# 1. Build
-# 2. Test by installing/running
-#    Remove any installed packages from previous docker-compose runs
-# 3. Copy the RPMs back to the host volume
-CMD /app/scripts/shibboleth-rebuild.sh && \
-  yum remove -y shibboleth* && \
-  yum install -y ~/rpmbuild/RPMS/x86_64/*.rpm && \
-  /usr/lib64/shibboleth/shibauthorizer && \
-  /usr/lib64/shibboleth/shibresponder && \
-  mkdir -p /app/build/centos-7/ && \
-  rsync --no-relative -vahu ~/rpmbuild/RPMS ~/rpmbuild/SRPMS /app/build/centos-7/
-
-COPY scripts/shibauthorizer.service /lib/systemd/system/
-COPY scripts/shibauthorizer.socket /lib/systemd/system/
-
-
-
-# ENTRYPOINT /usr/sbin/nginx -g 'daemon off;' -c /etc/nginx/nginx.conf
-
-# EXPOSE 80
+EXPOSE 80
